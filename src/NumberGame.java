@@ -9,7 +9,8 @@
 public class NumberGame {
 	/** A helpful message for user. */
 	private String message;
-
+	/** for count your guess. */
+	public int count = 0;
     /** Initialize a new default game. */
     public NumberGame() {
 		// initialize your game.
@@ -54,6 +55,9 @@ public class NumberGame {
 		return Integer.MAX_VALUE;  // not very helpful :-)
 	}
     
+	public int getCount(){
+		return count;
+	}
     /**
      * toString describes the game or problem.
      * @return description of this game or the problem to be solved.
