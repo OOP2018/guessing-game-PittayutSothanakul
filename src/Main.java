@@ -5,9 +5,9 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 100;
+		int upperBound = 101;
 		PittayutGame game = new PittayutGame(upperBound);
-//		GameConsole ui = new GameConsole();
+		// GameConsole ui = new GameConsole();
 		GameSolver ui = new GameSolver();
 		int solution = ui.play(game);
 		// TODO display the answer returned by play

@@ -1,4 +1,5 @@
 import java.util.Random;
+
 /**
  * guessing game.
  * 
@@ -22,6 +23,7 @@ public class PittayutGame extends NumberGame {
 		System.out.println(secret);
 		this.message = "I'm thinking of a number between 1 and " + upperBound;
 	}
+
 	/**
 	 * Create boolean to change Sting hint
 	 * 
@@ -45,6 +47,7 @@ public class PittayutGame extends NumberGame {
 		}
 		return check;
 	}
+
 	/**
 	 * Return a maximum to guess.
 	 * 
@@ -53,6 +56,7 @@ public class PittayutGame extends NumberGame {
 	public int getUpperBound() {
 		return upperBound;
 	}
+
 	/**
 	 * Return a random number to guess.
 	 * 
@@ -63,6 +67,7 @@ public class PittayutGame extends NumberGame {
 		Random random = new Random(seed);
 		return random.nextInt(limit) + 1;
 	}
+
 	/**
 	 * Change a String message in guess
 	 * 
@@ -72,6 +77,7 @@ public class PittayutGame extends NumberGame {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
 	/**
 	 * Return a message based on the most recent guess.
 	 * 
