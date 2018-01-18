@@ -1,7 +1,7 @@
 import java.util.Random;
 
 /**
- * guessing game.
+ * Game of guessing a secret number.
  * 
  * @author Pittayut Sothanakul
  * @version 2018.01.12
@@ -87,8 +87,9 @@ public class PittayutGame extends NumberGame {
 		return this.message;
 	}
 
-	@Override
 	public String toString() {
 		return "Guess a secret number between 1 and " + upperBound;
 	}
+
+
 }

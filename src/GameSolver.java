@@ -1,5 +1,8 @@
-
 import java.util.Scanner;
+
+/**
+ * Automatically find the secret ti any Numbergame.
+ */
 
 public class GameSolver {
 	/** play the game. */
@@ -46,7 +49,7 @@ public class GameSolver {
 				divide = divide / 2;
 			}
 		} while (!check);
-		System.out.println("Your count " + game.getCount() + " times");
+
 		return guess;
 	}
 

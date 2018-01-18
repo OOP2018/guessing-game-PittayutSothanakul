@@ -25,7 +25,6 @@ public class NumberGame {
 	 * @return true if correct, false otherwise
 	 */
 	public boolean guess(int answer) {
-		// TODO your subclass should override this method
 		message = "Sorry, that's not correct";
 		return false;
 	}
@@ -58,7 +57,12 @@ public class NumberGame {
 	public int getUpperBound() {
 		return Integer.MAX_VALUE; // not very helpful :-)
 	}
-
+	/**
+	 * Get count when you guess.
+	 * 
+	 * @return count you guess time.
+	 */
+	
 	public int getCount() {
 		return count;
 	}
