@@ -9,7 +9,7 @@ public class NumberGame {
 	/** A helpful message for user. */
 	private String message;
 	/** for count your guess. */
-	public int count = 0;
+	public int count = 1;
 
 	/** Initialize a new default game. */
 	public NumberGame() {

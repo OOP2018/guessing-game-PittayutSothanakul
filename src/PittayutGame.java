@@ -20,7 +20,7 @@ public class PittayutGame extends NumberGame {
 	public PittayutGame(int upperBound) {
 		this.upperBound = upperBound;
 		this.secret = getRandomNumber(upperBound);
-		System.out.println(secret);
+//		System.out.println(secret);
 		this.message = "I'm thinking of a number between 1 and " + upperBound;
 	}
 
@@ -32,7 +32,7 @@ public class PittayutGame extends NumberGame {
 	 * @return new hint if you guess true or false
 	 */
 	public boolean guess(int number) {
-		count++;
+		
 		boolean check = false;
 		if (number == this.secret) {
 			setMessage("Correct !! secret is " + this.secret);
@@ -44,6 +44,7 @@ public class PittayutGame extends NumberGame {
 			} else if (number < this.secret) {
 				setMessage("too small");
 			}
+			count++;
 		}
 		return check;
 	}
@@ -68,28 +69,8 @@ public class PittayutGame extends NumberGame {
 		return random.nextInt(limit) + 1;
 	}
 
-	/**
-	 * Change a String message in guess
-	 * 
-	 * @param message
-	 *            is Sting for message
-	 */
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	/**
-	 * Return a message based on the most recent guess.
-	 * 
-	 * @return message based on most recent guess
-	 */
-	public String getMessage() {
-		return this.message;
-	}
-
 	public String toString() {
 		return "Guess a secret number between 1 and " + upperBound;
 	}
-
 
 }

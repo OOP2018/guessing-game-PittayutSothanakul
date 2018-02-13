@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 /**
  * Automatically find the secret ti any Numbergame.
@@ -7,8 +6,7 @@ import java.util.Scanner;
 public class GameSolver {
 	/** play the game. */
 	public int play(PittayutGame game) {
-		Scanner console = new Scanner(System.in);
-
+		
 		// describe the game
 		System.out.println(game.toString());
 

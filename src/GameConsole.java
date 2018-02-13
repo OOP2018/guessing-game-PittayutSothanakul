@@ -16,12 +16,15 @@ public class GameConsole {
 
 		boolean check = false;
 		int guess;
-		System.out.println(game.getMessage());
+
 		do {
+		
+			System.out.println("time "+game.getCount());
 			System.out.print("Your answer? ");
 			guess = Integer.parseInt(console.nextLine());
 			check = game.guess(guess);
 			System.out.println(game.getMessage());
+		
 
 		} while (!check);
 		System.out.println("Your count " + game.getCount() + " times");
