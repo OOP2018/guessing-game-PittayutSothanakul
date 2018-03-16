@@ -1,3 +1,7 @@
+package game;
+
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Random;
 
 /**
@@ -6,7 +10,7 @@ import java.util.Random;
  * @author Pittayut Sothanakul
  * @version 2018.01.12
  */
-public class PittayutGame extends NumberGame {
+public class PittayutGame extends NumberGame implements Observer {
 	private int secret;
 	private int upperBound;
 	private String message;
@@ -20,7 +24,7 @@ public class PittayutGame extends NumberGame {
 	public PittayutGame(int upperBound) {
 		this.upperBound = upperBound;
 		this.secret = getRandomNumber(upperBound);
-//		System.out.println(secret);
+		// System.out.println(secret);
 		this.message = "I'm thinking of a number between 1 and " + upperBound;
 	}
 
@@ -32,10 +36,12 @@ public class PittayutGame extends NumberGame {
 	 * @return new hint if you guess true or false
 	 */
 	public boolean guess(int number) {
-		
+
 		boolean check = false;
 		if (number == this.secret) {
 			setMessage("Correct !! secret is " + this.secret);
+			setChanged();
+			notifyObservers();
 			return true;
 		} else {
 			check = false;
@@ -46,6 +52,8 @@ public class PittayutGame extends NumberGame {
 			}
 			count++;
 		}
+		setChanged();
+		notifyObservers();
 		return check;
 	}
 
@@ -71,6 +79,11 @@ public class PittayutGame extends NumberGame {
 
 	public String toString() {
 		return "Guess a secret number between 1 and " + upperBound;
+	}
+
+	@Override
+	public void update(Observable subject, Object info) {
+		System.out.println("Your guess");
 	}
 
 }

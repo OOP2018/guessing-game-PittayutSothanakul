@@ -1,4 +1,4 @@
-
+package game;
 /**
  * Automatically find the secret ti any Numbergame.
  */
